@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NodeList n htmlCollection</title>
+  </head>
+  <body>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <script>
+      let htmlCollection = document.getElementsByTagName("li");
+      let nodeList = document.querySelectorAll("li");
+      let ulContainer = document.querySelector("ul");
+      let liNew = document.createElement("li");
+      liNew.innerHTML = "item baru";
+
+      ulContainer.appendChild(liNew);
+      console.log(htmlCollection);
+      console.log(nodeList);
+    </script>
+  </body>
+</html>
