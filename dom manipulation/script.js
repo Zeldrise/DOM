@@ -31,6 +31,12 @@ document.body.style.backgroundImage =
 //   .setAttribute("placeholder", "Masukan Tugas Baru");
 
 let inputButton = document.querySelector("#input button");
+inputButton.innerHTML = "tambah";
+inputButton.addEventListener("click", klik);
+function klik() {
+  alert("ok");
+}
+inputButton.onclick = klik;
 
 document.getElementById("input").addEventListener("submit", aktif);
 function aktif(event) {
@@ -42,27 +48,32 @@ function aktif(event) {
   // }
 }
 
-// inputButton.addEventListener("click", btnAktif);
-// function btnAktif() {
-//   console.log("button aktif");
-// }
+inputButton.addEventListener("click", btnAktif);
+function btnAktif() {
+  console.log("button aktif");
+}
 
 // function klik() {
 //   alert("ok");
 // }
 // inputButton.onclick = klik;
 
-// function gantiRed() {
-//   inputButton.style.backgroundColor = "red";
-// }
-// function gantiBlack() {
-//   inputButton.style.color = "black";
-// }
-// inputButton.addEventListener("mouseover", gantiRed);
-// inputButton.addEventListener("mouseover", gantiBlack);
+inputButton.addEventListener("mouseover", gantiRed);
+inputButton.addEventListener("mouseover", gantiBlack);
+function gantiRed() {
+  inputButton.style.backgroundColor = "red";
+}
+function gantiBlack() {
+  inputButton.style.color = "black";
+}
 // const judul = document.querySelector("#judul");
 // judul.style.color = "lightgreen";
 // judul.style.backgroundColor = "salmon";
+
+document.getElementById("input").addEventListener("submit", submitAktif);
+function submitAktif() {
+  console.log("submit aktif");
+}
 
 function tambahTugas() {
   let list = document.getElementById("list");
